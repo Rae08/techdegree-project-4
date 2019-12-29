@@ -1,3 +1,10 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * app.js */
+const start = document.querySelector('#btn__reset');
+const game = new Game;
+
+start.addEventListener('click', function() {
+  game.startGame();
+} )
+
+
+
+
