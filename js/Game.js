@@ -6,7 +6,7 @@ class Game {
   }
 
   createPhrases(){
-    let phrases = ['Phrase One', 'Phrase Two', 'Phrase Three', 'Phrase Four', 'Phrase Five'];
+    let phrases = ['A Cat Nap', 'Curiousity Killed The Cat', 'Fat Cat', 'Has the cat got your tongue', 'Let the cat out of the bag', 'Like herding cats', 'Look what the cat dragged in'];
     
     return phrases;
   }
