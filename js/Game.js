@@ -96,7 +96,7 @@ class Game {
 // checks if it is in the phrase, if so calls the showMatchedLetter method and checks if the game is won
 // if the letter is not in the phrase, calls the removeLife method
 // if the game is won, ends the game
-  handleInteraction(letter) {    
+  handleInteraction(letter) {        
     let phrase = new Phrase(this.activePhrase.phrase);
     let allKeys = document.querySelectorAll('.key');
 
@@ -106,7 +106,7 @@ class Game {
       }
     })
     
-    if (phrase.checkLetter(letter.innerText) !== true) {
+    if (phrase.checkLetter(letter.innerText) !== true) {      
       letter.className = 'key wrong';
       this.removeLife();
     } else {

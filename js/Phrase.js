@@ -27,13 +27,12 @@ class Phrase {
   checkLetter(guess) {
     const arrayOfLetters = this.phrase.split('');
     let match = false;
-    
+
     arrayOfLetters.forEach(letter => {
       if (letter === guess){
         match = true;
       } 
     });
-
     return match;
   }
 

@@ -3,6 +3,17 @@ const game = new Game;
 
 start.addEventListener('click', function() {
   game.startGame();
+  
+  // once the game is started, listens to keypresses and then matches the button pressed with the on screen button and calls the handleInteraction method
+  document.addEventListener('keyup', function(e) {
+    let letter = e.code[3].toLowerCase();
+    let keys = document.querySelectorAll('.key');
+    keys.forEach(key => {
+      if(key.innerText === letter){
+        game.handleInteraction(key);
+      }
+    })    
+  })
 } )
 
 const key = document.querySelector('#qwerty');
@@ -16,6 +27,3 @@ key.addEventListener('click', function() {
   }
   game.handleInteraction(event.target);
 })
-
-
-
