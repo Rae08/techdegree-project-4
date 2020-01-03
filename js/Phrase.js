@@ -22,7 +22,24 @@ class Phrase {
     });
   }
 
-  checkLetters(letter) {
+  checkLetter(guess) {
+    const arrayOfLetters = this.phrase.split('');
+    let match = false;
     
+    arrayOfLetters.forEach(letter => {
+      if (letter === guess){
+        match = true;
+      } 
+    });
+
+    return match;
+  }
+
+  showMatchedLetter(letter) {
+    let matchedLetter = `.${letter}`;
+    let showLetter = document.querySelectorAll(matchedLetter);
+    showLetter.forEach(letter => {
+      letter.className = 'show';
+    })
   }
 }
