@@ -4,12 +4,13 @@ const game = new Game;
 start.addEventListener('click', function() {
   game.startGame();
   
-  // once the game is started, listens to keypresses and then matches the button pressed with the on screen button and calls the handleInteraction method
+  // once the game is started, listens to keypresses
+  // matches the button pressed with the on screen button and if the button is not disabled, passes the button into the handleInteraction method
   document.addEventListener('keyup', function(e) {
     let letter = e.code[3].toLowerCase();
     let keys = document.querySelectorAll('.key');
     keys.forEach(key => {
-      if(key.innerText === letter){
+      if(key.innerText === letter && key.disabled === false){
         game.handleInteraction(key);
       }
     })    
